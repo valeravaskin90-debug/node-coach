@@ -1,0 +1,20 @@
+ROOT-АДРЕС ВИДА https://nodecoachcs.github.io/
+
+Для такого адреса владелец GitHub должен называться `nodecoachcs`
+(личный аккаунт или организация), а репозиторий — `nodecoachcs.github.io`.
+
+Обычный и более быстрый вариант:
+
+https://ВАШ_ЛОГИН.github.io/node-coach-cs/
+
+Его создаёт PUBLISH_TO_GITHUB.cmd.
+
+Позже можно купить собственный домен, например:
+
+nodecoach.gg
+nodecoachcs.com
+cs.nodecoach.gg
+
+И подключить его в:
+
+Repository → Settings → Pages → Custom domain

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ru" data-game="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Node Coach — единая платформа послематчевого анализа для Counter-Strike 2 и Dota 2.">
+  <meta name="theme-color" content="#0b1016">
+  <title>Node Coach — CS2 и Dota 2</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Node Coach">
+      <img src="assets/logo-platform.svg" alt="Node Coach">
+    </a>
+    <nav>
+      <a href="#products">Продукты</a>
+      <a href="#features">Возможности</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#beta">Beta</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="button nav-button" href="#download">Скачать beta</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="status-pill">
+          <span class="pulse"></span>
+          OPEN BETA • БЕСПЛАТНО
+        </div>
+        <div class="eyebrow">ONE COACH • TWO COMPETITIVE GAMES</div>
+        <h1>Один тренер.<br><span id="hero-game-line">Две игры.</span><br>Одна история роста.</h1>
+        <p id="hero-description">Node Coach CS разбирает завершённые демки, раунды, opening-контакты, размены и utility. Никаких подсказок во время матча.</p>
+        <div class="hero-actions">
+          <a id="primary-download" class="button primary" href="download-cs.html">Скачать CS beta</a>
+          <a class="button secondary" href="#products">Выбрать игру</a>
+        </div>
+        <div class="hero-trust">
+          <span>● Локальная обработка</span>
+          <span>● Без live-подсказок</span>
+          <span>● AI необязателен</span>
+        </div>
+      </div>
+
+      <div class="product-stage">
+        <div class="stage-orbit orbit-1"></div>
+        <div class="stage-orbit orbit-2"></div>
+
+        <div class="switcher-label">ВЫБЕРИ РЕЖИМ</div>
+        <div class="game-switcher" id="game-switcher" role="tablist">
+          <button class="game-card active" data-game="cs" role="tab" aria-selected="true">
+            <div class="game-card-glow"></div>
+            <div class="game-card-top">
+              <span class="game-index">01</span>
+              <span class="game-state">ACTIVE</span>
+            </div>
+            <div class="game-icon cs-icon">CS</div>
+            <div class="game-card-copy">
+              <strong>Counter-Strike 2</strong>
+              <small>Раунды • размены • utility</small>
+            </div>
+            <div class="game-card-arrow">↗</div>
+          </button>
+
+          <button class="game-card" data-game="dota" role="tab" aria-selected="false">
+            <div class="game-card-glow"></div>
+            <div class="game-card-top">
+              <span class="game-index">02</span>
+              <span class="game-state">SELECT</span>
+            </div>
+            <div class="game-icon dota-icon">D2</div>
+            <div class="game-card-copy">
+              <strong>Dota 2</strong>
+              <small>Роли • драфты • replay lab</small>
+            </div>
+            <div class="game-card-arrow">↗</div>
+          </button>
+        </div>
+
+        <div class="product-window">
+          <div class="window-top">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <span id="window-title">Node Coach CS</span>
+            <em id="window-badge">POST-MATCH</em>
+          </div>
+          <div class="window-body">
+            <aside class="mini-nav">
+              <div class="mini-logo">N//</div>
+              <span class="active">Обзор</span>
+              <span id="nav-item-a">Demo Lab</span>
+              <span id="nav-item-b">Раунды</span>
+              <span>Команда</span>
+              <span>Тренер</span>
+            </aside>
+
+            <div class="dashboard">
+              <div class="dashboard-head">
+                <div>
+                  <small id="dash-kicker">ПОСЛЕДНИЙ МАТЧ</small>
+                  <h3 id="dash-title">Mirage • 13:11</h3>
+                </div>
+                <div id="dash-result" class="result-chip">Победа</div>
+              </div>
+
+              <div class="metrics" id="metrics">
+                <article><small>ADR</small><strong>78.4</strong><b>+4.8</b></article>
+                <article><small>KAST</small><strong>70.8%</strong><b>стабильно</b></article>
+                <article><small>OPENING</small><strong>4–5</strong><b class="risk">риск</b></article>
+                <article><small>TRADE</small><strong>35%</strong><b class="risk">ниже цели</b></article>
+              </div>
+
+              <div class="coach-card">
+                <div class="coach-mark">NC</div>
+                <div>
+                  <small>СЛОВО ТРЕНЕРА</small>
+                  <p id="coach-text">Ты создаёшь достаточно урона, но пять первых смертей заставляют команду слишком часто играть 4v5. Главная задача — качество первого контакта и дистанция второго игрока.</p>
+                </div>
+              </div>
+
+              <div class="dashboard-lower">
+                <div class="priority-card">
+                  <small>ГЛАВНЫЕ ПРИОРИТЕТЫ</small>
+                  <ol id="priority-list">
+                    <li>Opening deaths</li>
+                    <li>Spacing для размена</li>
+                    <li>Utility до контакта</li>
+                  </ol>
+                </div>
+                <div class="signal-card">
+                  <small id="signal-title">РАУНДЫ</small>
+                  <div class="signal-bars" id="signal-bars">
+                    <i style="height:44%"></i><i style="height:70%"></i><i style="height:35%"></i>
+                    <i style="height:82%"></i><i style="height:58%"></i><i style="height:90%"></i>
+                    <i style="height:62%"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="window-accent"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="beta-strip" id="beta">
+      <div>
+        <span class="beta-tag">OPEN BETA</span>
+        <strong>Обе версии сейчас бесплатны</strong>
+      </div>
+      <p>Мы проверяем точность аналитики, совместимость с разными компьютерами и собираем обратную связь. Replay-файлы не отправляются автоматически.</p>
+      <a href="#download">Принять участие →</a>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="section-head">
+        <div class="eyebrow">TWO PRODUCTS • ONE PLATFORM</div>
+        <h2>Переключайся между играми<br>без смены экосистемы</h2>
+        <p>Одинаковая логика продукта, но разные аналитические движки, метрики и тренировочные сценарии.</p>
+      </div>
+
+      <div class="product-panels">
+        <article class="product-panel cs-panel" data-select-game="cs">
+          <div class="panel-number">01</div>
+          <div class="panel-icon">CS</div>
+          <div>
+            <span class="panel-kicker">NODE COACH CS</span>
+            <h3>Разбирай решения по раундам</h3>
+            <p>Локальные .dem, opening, trade rate, utility, карта смертей, командная пятёрка и сравнение с эталонной демкой.</p>
+          </div>
+          <button class="panel-select">Выбрать CS</button>
+        </article>
+
+        <article class="product-panel dota-panel" data-select-game="dota">
+          <div class="panel-number">02</div>
+          <div class="panel-icon">D2</div>
+          <div>
+            <span class="panel-kicker">NODE COACH DOTA</span>
+            <h3>Пойми, где развалился план</h3>
+            <p>Роли, экономика, Replay Lab, драфты, профессиональные эталоны, командный разбор и тренировочные сезоны.</p>
+          </div>
+          <button class="panel-select">Выбрать Dota</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section feature-section" id="features">
+      <div class="section-head compact">
+        <div class="eyebrow" id="feature-eyebrow">NODE COACH CS</div>
+        <h2 id="feature-title">От демки до тренировочного блока</h2>
+      </div>
+
+      <div class="feature-grid" id="feature-grid">
+        <article>
+          <b>01</b>
+          <h3>Demo Lab</h3>
+          <p>K/D, ADR, KAST, opening, headshots, размены и utility damage.</p>
+        </article>
+        <article>
+          <b>02</b>
+          <h3>Раундовый таймлайн</h3>
+          <p>Первый контакт, установка бомбы и ключевые события каждого раунда.</p>
+        </article>
+        <article>
+          <b>03</b>
+          <h3>Карта смертей</h3>
+          <p>Повторяющиеся точки риска и фильтрация по игроку.</p>
+        </article>
+        <article>
+          <b>04</b>
+          <h3>Командная комната</h3>
+          <p>Пятёрка, роли, opening-баланс и качество разменов.</p>
+        </article>
+        <article>
+          <b>05</b>
+          <h3>Сравнение</h3>
+          <p>Своя демка против профессиональной или сильной эталонной.</p>
+        </article>
+        <article>
+          <b>06</b>
+          <h3>Тренировочный сезон</h3>
+          <p>Одна цель на 5–20 матчей и измеримый прогресс.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="platform-section">
+      <div class="platform-copy">
+        <div class="eyebrow">NODE COACH CORE</div>
+        <h2>Общее ядро для обеих игр</h2>
+        <p>История отчётов, локальный AI-тренер, командные профили, тренировочные сезоны, цветовые темы и единая продуктовая логика.</p>
+        <div class="platform-points">
+          <span>Локальные отчёты</span>
+          <span>HTML-экспорт</span>
+          <span>Командный режим</span>
+          <span>Ollama по желанию</span>
+        </div>
+      </div>
+      <div class="core-visual">
+        <div class="core-ring ring-a"></div>
+        <div class="core-ring ring-b"></div>
+        <div class="core-center">NC</div>
+        <div class="core-node node-cs">CS</div>
+        <div class="core-node node-dota">D2</div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="section-head">
+        <div class="eyebrow">PRICING PREVIEW</div>
+        <h2>Сейчас бесплатно.<br>После beta — от 399 ₽</h2>
+        <p>Окончательные тарифы будут определены после тестирования. Участники beta получат условия раннего доступа.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <article>
+          <span>FREE</span>
+          <strong>0 ₽</strong>
+          <small>Навсегда</small>
+          <ul>
+            <li>Базовый анализ</li>
+            <li>Ограниченная история</li>
+            <li>TXT/HTML отчёты</li>
+            <li>Одна команда</li>
+          </ul>
+        </article>
+
+        <article class="featured">
+          <div class="pricing-badge">ПЛАНИРУЕТСЯ</div>
+          <span>PLAYER</span>
+          <strong>399 ₽</strong>
+          <small>в месяц</small>
+          <ul>
+            <li>Обе игры</li>
+            <li>Расширенные отчёты</li>
+            <li>Тренировочные сезоны</li>
+            <li>Сравнение с pro</li>
+          </ul>
+        </article>
+
+        <article>
+          <span>TEAM</span>
+          <strong>1 990 ₽</strong>
+          <small>в месяц</small>
+          <ul>
+            <li>До 7 игроков</li>
+            <li>Командные отчёты</li>
+            <li>Драфты и роли</li>
+            <li>Экспорт для тренера</li>
+          </ul>
+        </article>
+      </div>
+      <p class="pricing-note">Цены предварительные и могут измениться по результатам beta.</p>
+    </section>
+
+    <section class="download-section" id="download">
+      <div class="download-copy">
+        <div class="eyebrow">OPEN BETA DOWNLOAD</div>
+        <h2 id="download-title">Node Coach CS</h2>
+        <p id="download-copy">Разбирай завершённые CS2-демки локально. Бесплатно на этапе открытой beta.</p>
+      </div>
+      <div class="download-actions">
+        <a id="download-main" class="button primary large" href="download-cs.html">Скачать CS beta</a>
+        <button id="download-switch" class="button secondary large" data-switch="dota">Переключить на Dota</button>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="section-head compact">
+        <div class="eyebrow">FAQ</div>
+        <h2>Перед установкой</h2>
+      </div>
+
+      <details>
+        <summary>Это чит или live-оверлей?</summary>
+        <p>Нет. Node Coach анализирует только завершённые матчи и не даёт подсказки во время активной игры.</p>
+      </details>
+      <details>
+        <summary>Почему две игры на одном сайте?</summary>
+        <p>Node Coach — единая тренерская платформа. CS и Dota используют разные аналитические движки, но общую систему отчётов, прогресса и командной работы.</p>
+      </details>
+      <details>
+        <summary>Что означает open beta?</summary>
+        <p>Продукты доступны бесплатно, пока мы проверяем точность аналитики, стабильность и полезность советов.</p>
+      </details>
+      <details>
+        <summary>Отправляются ли replay-файлы?</summary>
+        <p>Нет, автоматическая отправка replay-файлов отключена. Они обрабатываются локально.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logo-platform.svg" alt="Node Coach">
+    <p>Node Coach не аффилирован с Valve Corporation, FACEIT или другими владельцами игровых брендов.</p>
+    <div>
+      <a href="privacy.html">Приватность</a>
+      <a href="terms.html">Условия</a>
+      <a href="https://github.com/" rel="noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

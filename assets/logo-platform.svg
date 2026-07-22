@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 104" role="img" aria-labelledby="t">
+<title id="t">Node Coach</title>
+<rect width="420" height="104" rx="18" fill="#0b1016"/>
+<path d="M26 78V26h12l30 33V26h14v52H70L40 45v33z" fill="#f4f7f8"/>
+<path d="M92 26h9L82 78h-9zM108 26h9L98 78h-9z" fill="currentColor"/>
+<text x="140" y="57" font-family="Segoe UI,Arial,sans-serif" font-size="29" font-weight="800" fill="#f4f7f8">NODE COACH</text>
+<text x="141" y="79" font-family="Segoe UI,Arial,sans-serif" font-size="12" letter-spacing="4" fill="#8f9ba6">POST-MATCH PLATFORM</text>
+</svg>

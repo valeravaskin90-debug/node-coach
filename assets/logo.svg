@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96">
+  <rect width="320" height="96" rx="16" fill="#0d1117"/>
+  <path d="M26 70V26h10l26 29V26h12v44H64L38 41v29z" fill="#f2f5f7"/>
+  <path d="M82 26h8l-16 44h-8zM96 26h8L88 70h-8z" fill="#58e0b5"/>
+  <path d="M132 26h36v10h-24v8h21v10h-21v6h25v10h-37z" fill="#f2f5f7"/>
+  <text x="184" y="49" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#f2f5f7">NODE COACH</text>
+  <text x="184" y="70" font-family="Segoe UI,Arial,sans-serif" font-size="13" letter-spacing="2" fill="#58e0b5">COUNTER-STRIKE</text>
+</svg>
